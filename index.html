@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link href="css/jquery.mobile-1.4.5.css" rel="stylesheet"/>
+<link href="css/jquery.mobile.theme-1.4.5.css" rel="stylesheet"/>
+<link href="css/jquery.mobile.structure-1.4.5.css" rel="stylesheet"/>
+
+<script src="js/jquery-2.1.4.min.js" type="text/jscript"></script>
+<script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+
+<style type="text/css">
+	p{
+		text-align:center;
+	};
+	
+</style>
+</head>
+
+<body>
+<div data-role="page" id="principal" data-content-theme="b">
+	<div data-role="header">
+    	<p>Encabezado de la aplicación</p>
+    </div>
+    <div data-role="content">
+    	<p>Opciones de transiciones</p>
+        <div data-role="main" class="ui-content">
+    	<form class="ui-filterable">
+	        <input id="miFiltro" data-type="search" />
+            
+        </form>
+        <ul data-role="listview" data-filter="true" data-input="#miFiltro" data-autodividers="true" data-inset="true">        	
+            <li><a href="#segunda" data-transition="fade">Transición Fade</a></li>
+            <li><a href="#segunda" data-transition="flip">Transición Flip</a></li>
+            <li><a href="#segunda" data-transition="pop">Transición Pop</a></li>
+            <li><a href="#segunda" data-transition="slide">Transición Slide</a></li>
+            <li><a href="#segunda" data-transition="slidedown">Transición Slide Down</a></li>
+            <li><a href="#segunda" data-transition="slideup">Transición Slide Up</a></li>
+            <li><a href="#formulario" data-transition="pop">Abrir formulario</a></li>
+            <li><a href="#segunda" data-transition="fade">Ana</a></li>
+            <li><a href="#segunda" data-transition="flip">Zenaida</a></li>
+            <li><a href="#segunda" data-transition="pop">Hortensia</a></li>
+            <li><a href="#segunda" data-transition="slide">Benito</a></li>
+            <li><a href="#segunda" data-transition="slidedown">Jimena</a></li>
+            <li><a href="#segunda" data-transition="slideup">Lourdes</a></li>
+            
+        </ul>
+        <ul>
+        	<li>Otras Opciones</li>
+        </ul>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+    	<p>Pie de aplicación</p>
+    </div>
+</div>
+
+<div data-role="page" id="segunda" data-theme="a">
+	<div data-role="panel" id="miPanel"> 
+    	<h2>Encabezado de Panel</h2>
+    <p>Mis opciones de configuración</p>
+  	</div> 
+
+	<div data-role="header">
+    <h1>Bienvenido a mi página principal</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#principal" class="ui-btn-active ui-state-persist" data-icon="home">Principal</a></li>
+        <li><a href="#" data-icon="arrow-r">Enlace que no lleva a lugar</a></li>
+      </ul>
+    </div>
+
+
+    	<a href="#principal" data-role="button" data-transition="flip">Atrás</a><p> Encabezado segunda ventana</p>
+    </div>
+    <div data-role="content">
+    	<div data-role="collapsible">
+        <h1>Más información</h1>
+    	<p>Este es el espacio para el contendio de la página dos</p>
+        <p>Sin lugar a dudas, la más votada por los usuarios de Quién.com. Pensar en arte nacional, implica forzosamente en remitirnos a Frida Kahlo; después de todo, personaje más icónico en la cultura mexicana no hay. Su trágica historia ha inspirado películas, su dramático arte es visto alrededor del mundo, vaya, hasta en los pareos que venden en Acapulco, y su controversial historia de amor es cuento para dormir en muchas familias desde hace generaciones.</p>
+        </div>
+        <a href="#miPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Abrir Configuraciones de Panel</a>
+        </div>
+    <div data-role="footer" style="text-align:center" data-position="fixed">
+    	<p>Pie de página dos</p>
+        <div data-role="controlgroup" data-type="horizontal">
+      <a href="https://es-la.facebook.com/" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Ir aFacebook</a>
+      <a href="https://twitter.com/?lang=es" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Sígueme en Twitter</a>
+      <a href="https://instagram.com/" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Agrégame en Instagram</a>
+    </div>
+
+    </div>
+</div>
+
+<div data-role="page"id="formulario">
+	<div data-role="header">
+    	<p>Controles del Formulario</p>
+        <a href="#principal" class="ui-btn ui-icon-camera ui-btn-icon-right" data-role="button" data-transition="flip">Atrás</a>
+    </div>
+    <div data-role="content">
+    	<form method="post" action="">
+      	<div class="ui-field-contain">
+        <label for="fname">Nombre Completo:</label>
+        <input type="text" name="fname" id="fname" data-clear-btn="true" placeholder="Escribe tu nombre y apellidos">
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" name="fecha" id="fecha">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="Escribe tu e-mail..">
+      	</div>
+        
+        
+        <fieldset class="ui-field-contain">
+        <label for="day">Seleccionar el Día</label>
+        <select name="day" id="day">
+          <optgroup label="Día hábiles">
+            <option value="mon">Lunes</option>
+            <option value="tue">Martes</option>
+            <option value="wed">Miércoles</option>
+            <option value="thu">Juéves</option>
+            <option value="fri">Viernes</option>
+          </optgroup>
+          <optgroup label="Fin de semana">
+            <option value="sat">Sábado</option>
+            <option value="sun">Domingo</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+	<fieldset>
+        <label for="day">Selecione tantos días como desee:</label>
+        <select name="day" id="day" multiple="multiple" data-native-menu="false">
+          <option>Day</option>
+          <option value="mon">Lunes</option>
+          <option value="tue">Martes</option>
+          <option value="wed">Miercoles</option>
+          <option value="thu">Juéves</option>
+          <option value="fri">Viernes</option>
+          <option value="sat">Sábado</option>
+          <option value="sun">Domingo</option>
+        </select>
+      </fieldset>
+
+		<label for="points">Calificación:</label>
+      	<input type="range" name="points" id="points" value="70" min="0" max="100">
+
+		<label for="switch">Aprobó</label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+
+
+
+
+      	<input type="submit" data-inline="true" value="Enviar">
+    	</form>
+    </div>
+    <div data-role="footer" data-position="fixed">
+    	<p>Pie de página sencillo</p>
+    </div>
+</div>
+
+
+
+</body>
+</html>
